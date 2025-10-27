@@ -235,6 +235,11 @@ Stwórz plik `main.tf` w katalogu `terraform-vm-lab`.
 
 Każdy student uzupełnia w sekcji `locals` swój **numer indeksu**:
 
+Istnieje możliwość że Twoja subskrypcja nie ma możliwości tworzyć zasoby w danym regionie. Jeśli dla `francecentral` dostałeś błąd 403 Forbidden, sprobuj zmienić region w locals na jeden z:
+ - ["norwayeast","italynorth","swedencentral","spaincentral"]
+
+ Warto wcześniej usunać stworzoną resource grupe (jeśli się utworzyła) i usunać katalog terraform-vm-lab i stworzyć wszystko od początku.
+
 ```hcl
 terraform {
   required_version = ">= 1.5.0"
